@@ -1,0 +1,22 @@
+class Solution {
+  public:
+    void pushZerosToEnd(vector<int>& arr) {
+        // --------- my code which only run for 1110 test cases -------
+    //   int d =0;
+    //   int i=0;
+    //   int n = arr.size();
+    //   while(d<=n-1){
+    //       while(i+1< n && arr[i]!=0) i++;
+    //       d=i;
+    //       while(d+1<= n && arr[d]==0) d++;
+           
+    //       if(arr[d]!=0 && d<n)
+    //       swap(arr[i],arr[d]);
+    //   }
+    
+        int n= arr.size(),j=0;
+        for(int i=0;i<n;i++){
+            if(arr[i])swap(arr[i],arr[j++]);
+        }
+    }
+};
